@@ -1,0 +1,295 @@
+.panel{
+    height:150px;
+    /* 必须得有边框,才能设置边框背景 */
+    border:20px solid red;
+    /* 边框的宽一般和边框背景图片需要用到的宽一致 */
+    /*border-width:50px 37px 20px 37px;*/
+    /* 内减模型:保证盒子的大小不变 */
+    box-sizing:border-box;
+    /* 边框背景图片 */
+    border-image-source:url("../images/border.png");
+    border-image-slice: 500 370 200 370;
+    border-image-width: 50px 50px 20px 50px;
+    border-image-repeat:stretch;
+
+    /* 父相 */
+    position:relative;
+    }
+.inner{
+    /* 子绝 */
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    /*padding:20px 30px;*/
+}
+
+
+body{
+    background-image: url('../images/background3.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.container{
+    min-height:700px;
+    max-width:1920px;
+    min-width:1300px;
+    margin: 0 auto;
+    background-image:url('../images/header_logo2.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    /*伸缩布局*/
+    display:flex;
+    padding:200px 20px 20px 20px;
+}
+
+.container .column:nth-child(1){
+    flex:3;
+}
+.overview{
+    height: 108px;
+}
+.overview .item{
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align:center;
+}
+.overview .item p{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+.overview .item span{
+    color: #4c9bfd;
+}
+.overview .item:nth-child(1) span i{
+    color: #6acca3;
+}
+.overview .item:nth-child(2) span i{
+    color: #6acca3;
+}
+.overview .item:nth-child(3) span i{
+    color: #6acca3;
+}
+.overview .item:nth-child(4) span i{
+    color: #6acca3;
+}
+/* 1.2 故障设备监控 */
+.monitor{
+    height: 475px;
+    margin-top: 20px;
+}
+/* 页签 */
+.monitor .tabs{
+    height: 24px;
+}
+.monitor .tabs a{
+    font-size: 18px;
+    color: #1950c4;
+}
+.monitor .tabs a.active {
+    color: white;
+}
+.monitor .tabs a:nth-child(1){
+    border-right: 2px solid #00f2f1;
+    padding-right: 26px;
+    margin-right: 26px;
+    padding-left:26px;
+}
+/*页面头部*/
+.monitor .content .head{
+    height: 38px;
+    line-height: 38px;
+    background:rgba(255,255,255,0.1);
+    margin-top:15px;
+}
+.monitor .content .head span{
+    color: #68d8fe;
+    width: 25%;
+    float: left;
+}
+.monitor .content .head span:nth-child(2){
+    width: 50%;
+    text-align:center;
+}
+.monitor .content .head span:nth-child(3){
+    text-align: center;
+}
+/*页面轮播图*/
+.monitor .content .carousel{
+    height: 360px;
+    /* 超出隐藏 */
+    overflow: hidden;
+}
+.monitor .content .carousel ul{
+     list-style-type: none;
+     padding-inline-start:5px;
+}
+.monitor .content .carousel li{
+    height: 35px;
+    line-height:35px;
+    color:#5696e5;
+}
+.monitor .content .carousel li:hover{
+    background-color:green;
+}
+.monitor .content .carousel li span{
+    float:left;
+    width:25%
+}
+.monitor .content .carousel li span:nth-child(2){
+    width: 50%;
+    /* 禁止自动换行 */
+    white-space: nowrap;
+    /* 超出隐藏 */
+    overflow:hidden;
+    /* 超出显示省略号 */
+    text-overflow: ellipsis;
+}
+.monitor .content .carousel li span:nth-child(3){
+    text-align:center;
+}
+
+
+/* 1.3 点位分布 */
+.point{
+height: 335px;
+margin-top: 20px;
+}
+.point h3{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+.point .echarts{
+    height:240px;
+    margin-top:15px;
+}
+.point .echarts .pie {
+    width: 65%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    float:left;
+}
+.point .echarts .data{
+    width:35%;
+    height:100%;
+    background: url('../images/background.jpg') no-repeat;
+    background-size: cover;
+    float:right;
+    text-align:center;
+}
+.point .echarts .data .item{
+    height: 50%;
+}
+.point .echarts .data .item p{
+    color: white;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:2px;
+}
+.point .echarts .data .item span{
+    color: #4ffbff;
+}
+
+/* 第二列 */
+.container .column:nth-child(2){
+    flex:4;
+    margin-left: 20px;
+    margin-right:20px;
+}
+/*2.1 设备数据统计 */
+.map{
+    height: 603px;
+}
+.map h3{
+    height:50px;
+    line-height: 50px;
+    font-size:22px;
+    font-weight: normal;
+    color: white;
+}
+.map h3 span{
+    color:#68d8fe;
+    margin-right:5px;
+}
+.map .echarts{
+    height:510px;
+    background:rgba(255,255,255,0.1);
+}
+.user{
+    height:335px;
+}
+.user h3{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+.user .echarts{
+    height:240px;
+    margin-top:15px;
+}
+.user .echarts .bar {
+    width: 75%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    float:left;
+}
+.user .echarts .data{
+    width:25%;
+    height:100%;
+    background: url('../images/background.jpg') no-repeat;
+    background-size: cover;
+    float:right;
+    text-align:center;
+}
+.user .echarts .data .item{
+    height: 50%;
+}
+.user .echarts .data .item p{
+    color: white;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:2px;
+}
+.user .echarts .data .item span{
+    color: #4ffbff;
+}
+
+/* 第三列 */
+.container .column:nth-child(3){
+    flex:3;
+}
+.order{
+    height: 144px;
+}
+.sales{
+    height: 244px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.channel{
+    height: 230px;
+    width:48%;
+    float:left;
+}
+.quarter{
+    height: 230px;
+    width:48%;
+    float:right;
+}
+.hot{
+    margin-top: 20px;
+    height: 280px;
+}
+
+
+
+
+
+
